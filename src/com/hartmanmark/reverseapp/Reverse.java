@@ -1,31 +1,30 @@
 package com.hartmanmark.reverseapp;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Reverse {
 
 	public String scanner() {
-		Scanner inputString = new Scanner(System.in);
-		String inputWords = inputString.nextLine();
-		inputString.close();
-		return inputWords;
+		Scanner newString = new Scanner(System.in);
+		String enteredString = newString.nextLine();
+		newString.close();
+		return enteredString;
 	}
 
-	public String[] split() {
+	public String[] splittingStringIntoWords() {
 		String stringFromSystemIn = scanner();
 		String[] splitWords = stringFromSystemIn.split(" ");
 		return splitWords;
 	}
 
-	public void join() {
-		String[] splitWords = split();
-		System.out.print("Your reverse string: ");
-		for (String word : splitWords) {
-			String reverseWord = new StringBuilder(word).toString();
-			char[] lettersArray = reverseWord.toCharArray();
-			reverse(lettersArray);
-			String outputWord = new String(lettersArray);
-			System.out.print(outputWord + " ");
+	public void printReverseWords(String[] splitWords) {
+		for (String i : splitWords) {
+			String oneWord = new StringBuilder(i).toString();
+			char[] arrayOfLettersOfWord = oneWord.toCharArray();
+			reverse(arrayOfLettersOfWord);
+			String reverseWord = new String(arrayOfLettersOfWord);
+			String oneReverseWordToPrint = String.join(" ", reverseWord);
+			System.out.print(oneReverseWordToPrint + " "); //
 		}
 	}
 
@@ -33,11 +32,11 @@ public class Reverse {
 		int r = str.length - 1;
 		int l = 0;
 		while (l < r) {
-			if (!Character.isLetter(str[l]))
+			if (!Character.isLetter(str[l])) {
 				l++;
-			else if (!Character.isLetter(str[r]))
+			} else if (!Character.isLetter(str[r])) {
 				r--;
-			else {
+			} else {
 				char tmp = str[l];
 				str[l] = str[r];
 				str[r] = tmp;
