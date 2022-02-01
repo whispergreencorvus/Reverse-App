@@ -17,14 +17,14 @@ public class Reverse {
 		return splitWords;
 	}
 
-	public void printReverseWords(String[] splitWords) {
+	public void printReverseWords(String[] splitWords) { 
 		for (String i : splitWords) {
 			String oneWord = new StringBuilder(i).toString();
 			char[] arrayOfLettersOfWord = oneWord.toCharArray();
 			reverse(arrayOfLettersOfWord);
 			String reverseWord = new String(arrayOfLettersOfWord);
 			String oneReverseWordToPrint = String.join(" ", reverseWord);
-			System.out.print(oneReverseWordToPrint + " "); //
+			System.out.print(oneReverseWordToPrint + " ");
 		}
 	}
 
