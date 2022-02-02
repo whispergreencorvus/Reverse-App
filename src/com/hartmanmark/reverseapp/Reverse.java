@@ -1,34 +1,14 @@
 package com.hartmanmark.reverseapp;
 
-import java.util.*;
-
 public class Reverse {
 
-    public String scanner() {
-        Scanner newString = new Scanner(System.in);
-        String enteredString = newString.nextLine();
-        newString.close();
-        return enteredString;
-    }
-
-    public String[] splittingStringIntoWords() {
-        String stringFromSystemIn = scanner();
+    public String[] splitStringIntoWords(String input) {
+        String stringFromSystemIn = input;
         String[] splitWords = stringFromSystemIn.split(" ");
         return splitWords;
     }
 
-    public void printReverseWords(String[] splitWords) {
-        for (String i : splitWords) {
-            String oneWord = new StringBuilder(i).toString();
-            char[] arrayOfLettersOfWord = oneWord.toCharArray();
-            reverse(arrayOfLettersOfWord);
-            String reverseWord = new String(arrayOfLettersOfWord);
-            String oneReverseWordToPrint = String.join(" ", reverseWord);
-            System.out.print(oneReverseWordToPrint + " ");
-        }
-    }
-
-    public void reverse(char str[]) {
+    public void reversingArrayOfLerrers(char str[]) {
         int r = str.length - 1;
         int l = 0;
         while (l < r) {
