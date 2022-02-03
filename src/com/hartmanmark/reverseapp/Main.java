@@ -10,7 +10,7 @@ public class Main {
         String enteredString = newString.nextLine();
         newString.close();
         Reverse reverse = new Reverse();
-        String[] arrayOfSplitWords = reverse.splitStringIntoWords(enteredString);
+        String[] arrayOfSplitWords = reverse.splitEnteredStringIntoWords(enteredString);
         System.out.print("Your reverse string: ");
         Print print = new Print();
         print.printReverseWords(arrayOfSplitWords);
