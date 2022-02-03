@@ -2,7 +2,7 @@ package com.hartmanmark.reverseapp;
 
 public class Reverse {
 
-    public String[] splitStringIntoWords(String input) {
+    public String[] splitEnteredStringIntoWords(String input) {
         String stringFromSystemIn = input;
         String[] splitWords = stringFromSystemIn.split(" ");
         return splitWords;
