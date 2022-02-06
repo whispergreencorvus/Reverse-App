@@ -9,13 +9,15 @@ class ReverseTest {
     @Test
     void testLowUpperCase() {
         Reverse reverse = new Reverse();
-        assertEquals("FEDCBA fedCBA fedcba", reverse.reverseString("ABCDEF ABCdef abcdef"));
+        assertEquals("FEDCBA fedCBA fedcba", 
+                reverse.reverseString("ABCDEF ABCdef abcdef"));
     }
 
     @Test
     void testNumbers() {
         Reverse reverse = new Reverse();
-        assertEquals("FEDCBA123 fedCBA123 fedcba123", reverse.reverseString("ABCDEF123 ABCdef123 abcdef123"));
+        assertEquals("FEDCBA123 fedCBA123 fedcba123", 
+                reverse.reverseString("ABCDEF123 ABCdef123 abcdef123"));
     }
 
     @Test
@@ -41,7 +43,8 @@ class ReverseTest {
                         + " noitacifidom dna noitubirtsider fo ecru-osnepo erawtfos. "
                         + "erawtfoS sesnecil tnarg sthgir ot sresu "
                         + "hcihw dluow esiwrehto eb devreser yb thgirypoc wal ot eht "
-                        + "thgirypoc redloh. lareveS ecru-osnepo " + "erawtfos sesnecil evah deifilauq nihtiw "
+                        + "thgirypoc redloh. lareveS ecru-osnepo " 
+                        + "erawtfos sesnecil evah deifilauq nihtiw "
                         + "eht seiradnuob fo eht nepO ecruoS noitinifeD. ehT tsom "
                         + "tnenimorp dna ralupop elpmaxe si eht UNG lareneG cilbuP "
                         + "esneciL (LPG), hcihw \"swolla eerf noitubirtsid "
