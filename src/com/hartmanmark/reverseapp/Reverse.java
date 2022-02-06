@@ -1,39 +1,30 @@
 package com.hartmanmark.reverseapp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Reverse {
 
-    public String redirect(String into) {
-        List<String> arrayOfSplitWords = splitStringIntoWords(into);
-        String stringToPrint = composingInvertedWords(arrayOfSplitWords);
+    public String reverseString(String input) {
+        String stringFromSystemIn = input;
+        String[] arrayOfSplitWords = stringFromSystemIn.split(" ");
+        String stringToPrint = compose(arrayOfSplitWords);
         return stringToPrint;
     }
 
-    private List<String> splitStringIntoWords(String input) {
-        List<String> splitWords = Arrays.asList(input.split(" "));
-        return splitWords;
-    }
-
-    private String composingInvertedWords(List<String> arrayOfSplitWords) {
-        Reverse reverse = new Reverse();
-        List<String> outputString = new ArrayList<String>();
-        String[] myArray = new String[outputString.size()];
+    private String compose(String[] arrayOfSplitWords) {
+        ArrayList<String> outputString = new ArrayList<String>();
         for (String i : arrayOfSplitWords) {
             String oneWord = new StringBuilder(i).toString();
             char[] arrayOfLettersOfWord = oneWord.toCharArray();
-            reverse.reversingArrayOfLerrers(arrayOfLettersOfWord);
+            reverse(arrayOfLettersOfWord);
             String reverseWord = new String(arrayOfLettersOfWord);
             outputString.add(reverseWord);
         }
-        outputString.toArray(myArray);
         String bindedWords = String.join(" ", outputString);
         return bindedWords;
     }
 
-    private void reversingArrayOfLerrers(char str[]) {
+    private void reverse(char str[]) {
         int r = str.length - 1;
         int l = 0;
         while (l < r) {

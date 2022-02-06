@@ -9,10 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String enteredString = scanner.nextLine();
         scanner.close();
-        System.out.print("Your reverse string: ");
         Reverse reverse = new Reverse();
-        String reversedString = reverse.redirect(enteredString);
-        Print print = new Print();
-        print.print(reversedString);
+        String reversedString = reverse.reverseString(enteredString);
+        System.out.print("Your reversed string: ");
+        System.out.print(reversedString);
     }
 }
