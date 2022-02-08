@@ -5,8 +5,17 @@ import java.util.ArrayList;
 public class Reverse {
 
     public String reverseString(String input) {
+        verifyString(input);
         String[] arrayOfSplitWords = input.split(" ");
         return composeInvertedWords(arrayOfSplitWords);
+    }
+
+    private String verifyString(String input) {
+        if (input == null || input.isEmpty() || input.trim().isEmpty()) {
+            throw new IllegalArgumentException("Null, Empty, or White Space Only String");
+        } else {
+            return input;
+        }
     }
 
     private String composeInvertedWords(String[] arrayOfSplitWords) {
