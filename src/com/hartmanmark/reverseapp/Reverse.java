@@ -11,8 +11,10 @@ public class Reverse {
     }
 
     private String verifyString(String input) {
-        if (input == null || input.isEmpty() || input.trim().isEmpty()) {
-            throw new IllegalArgumentException("Null, Empty, or White Space Only String");
+        if (input.isEmpty()) {
+            throw new IllegalArgumentException("Empty String");
+        } else if (input.trim().isEmpty()) {
+            throw new IllegalArgumentException("White Space Only String");
         } else {
             return input;
         }
