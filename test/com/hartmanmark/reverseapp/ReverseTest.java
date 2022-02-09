@@ -8,26 +8,24 @@ import org.junit.jupiter.api.Test;
 
 class ReverseTest {
 
-    Reverse reverse = null;
-    Throwable exception = null;
+    private Reverse reverse;
 
     @BeforeEach
     void init() {
         reverse = new Reverse();
-        exception = new Throwable();
     }
 
     @Test
     void reverseString_shouldGetIllegalArgumentException_whenInputStringContainsNull() {
-        exception = assertThrows(NullPointerException.class, () -> {
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
             reverse.reverseString(null);
         });
-        assertEquals(null, exception.getMessage());
+        assertEquals("null", exception.getMessage());
     }
 
     @Test
     void reverseString_shouldGetIllegalArgumentException_whenInputStringContainsEmptyString() {
-        exception = assertThrows(IllegalArgumentException.class, () -> {
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
             reverse.reverseString("");
         });
         assertEquals("Empty String", exception.getMessage());
@@ -35,7 +33,7 @@ class ReverseTest {
 
     @Test
     void reverseString_shouldGetIllegalArgumentException_whenInputStringContainsSingleSpaces() {
-        exception = assertThrows(IllegalArgumentException.class, () -> {
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
             reverse.reverseString(" ");
         });
         assertEquals("White Space Only String", exception.getMessage());
@@ -43,7 +41,7 @@ class ReverseTest {
 
     @Test
     void reverseString_shouldGetIllegalArgumentException_whenInputStringContainsSeveralSpaces() {
-        exception = assertThrows(IllegalArgumentException.class, () -> {
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
             reverse.reverseString("     ");
         });
         assertEquals("White Space Only String", exception.getMessage());
