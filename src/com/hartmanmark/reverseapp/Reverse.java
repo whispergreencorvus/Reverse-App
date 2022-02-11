@@ -23,7 +23,7 @@ public class Reverse {
     }
 
     private String composeInvertedWords(String[] arrayOfSplitWords) {
-        ArrayList<String> outputString = new ArrayList<String>();
+        ArrayList<String> outputString = new ArrayList<>();
         for (String i : arrayOfSplitWords) {
             char[] arrayOfLettersOfWord = new StringBuilder(i).toString().toCharArray();
             reverseArrayOfLetters(arrayOfLettersOfWord);
@@ -33,7 +33,7 @@ public class Reverse {
         return String.join(" ", outputString);
     }
 
-    private void reverseArrayOfLetters(char str[]) {
+    private void reverseArrayOfLetters(char[] str) {
         int i = str.length - 1;
         int j = 0;
         while (j < i) {
