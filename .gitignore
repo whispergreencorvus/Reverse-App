@@ -5,3 +5,6 @@
 bin/
 .classpath
 .project
+target/
+src/main
+src/test

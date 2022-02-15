@@ -12,7 +12,7 @@ public class Reverse {
 
     private String verifyString(String input) {
         if (input == null) {
-            throw new IllegalArgumentException("null");
+            throw new IllegalArgumentException("Null");
         } else if (input.isEmpty()) {
             throw new IllegalArgumentException("Empty String");
         } else if (input.trim().isEmpty()) {

@@ -20,7 +20,7 @@ class ReverseTest {
         Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
             reverse.reverseString(null);
         });
-        assertEquals("null", exception.getMessage());
+        assertEquals("Null", exception.getMessage());
     }
 
     @Test
