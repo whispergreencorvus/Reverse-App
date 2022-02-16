@@ -8,13 +8,13 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>reverseapp</name>
-    <description>A simple reverseapp.</description>
-    <url>http://www.example.com</url>
+    <description>A simple reverse app</description>
+    <url>http://www.somewebsite.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>      
+        <maven.compiler.target>1.8</maven.compiler.target>
         <junit.jupiter.version>5.8.1</junit.jupiter.version>
         <junit.platform.version>1.8.1</junit.platform.version>
         <java.version>1.8</java.version>
